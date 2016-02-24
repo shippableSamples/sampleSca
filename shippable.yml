@@ -12,4 +12,5 @@ build:
 
   ci:
     - java -version
-    - sbt ++$SHIPPABLE_SCALA_VERSION test
+   # - sbt ++$SHIPPABLE_SCALA_VERSION test
+    - echo $SHIPPABLE_SCALA_VERSION
