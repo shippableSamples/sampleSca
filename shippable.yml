@@ -1,5 +1,7 @@
+#language
 language: scala
 
+#version number
 scala:
     - 2.11.0
     - 2.9.3
@@ -15,10 +17,11 @@ services:
     - rabbitmq
     
 build:
-  ci:
-    - echo $SHIPPABLE_SCALA_VERSION
-    
   pre_ci_boot:
     image_name: drydock/u12scapls
     image_tag: prod
     pull: true
+    
+  ci:
+    - java -version
+    - echo $SHIPPABLE_SCALA_VERSION
