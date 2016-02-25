@@ -1,5 +1,7 @@
+#language
 language: scala
 
+#version number
 scala:
     - 2.11.0
     - 2.9.3
@@ -18,10 +20,12 @@ services:
     - rethinkdb
     
 build:
-  ci:
-    - echo $SHIPPABLE_SCALA_VERSION
-    
+
   pre_ci_boot:
     image_name: drydock/u14scaall
     image_tag: prod
     pull: true
+    
+  ci:
+    - echo $SHIPPABLE_SCALA_VERSION
+  
