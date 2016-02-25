@@ -10,6 +10,6 @@ build:
     - echo $SHIPPABLE_SCALA_VERSION
     
   pre_ci_boot:
-    image_name: drydock/u12sca
+    image_name: drydock/u14sca
     image_tag: prod
     pull: true
