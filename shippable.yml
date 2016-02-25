@@ -1,0 +1,20 @@
+#language
+language: scala
+
+#version number
+scala:
+    - 2.11.0
+    - 2.9.3
+    - 2.10.5
+    
+build:
+
+  pre_ci_boot:
+    image_name: drydock/u14sca
+    image_tag: prod
+    pull: true
+    
+  ci:
+    - java -version
+    - echo $SHIPPABLE_SCALA_VERSION
+    
