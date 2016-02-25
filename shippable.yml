@@ -1,0 +1,32 @@
+#language
+language: scala
+
+#version number
+scala:
+    - 2.11.0
+    - 2.9.3
+    - 2.10.5
+    
+services:
+    - mysql
+    - postgres
+    - mongo
+    - elasticsearch
+    - redis
+    - memcache
+    - rabbitmq
+    - neo4j
+    - couchdb
+    - rethinkdb
+    
+build:
+
+  pre_ci_boot:
+    image_name: drydock/u12scaall
+    image_tag: prod
+    pull: true
+    
+  ci:
+    - java -version
+    - echo $SHIPPABLE_SCALA_VERSION
+  
